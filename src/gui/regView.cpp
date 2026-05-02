@@ -58,8 +58,8 @@ void FurnaceGUI::drawRegView() {
         ImGui::PushFont(patFont);
         int rows=MAX(1,regViewColumns/MAX(1,(1<<(bsr(depth)-4))));
         if (ImGui::BeginTable("Memory",1+rows)) {
-          float widthOne=ImGui::CalcTextSize(fmt::sprintf("%X",size-1).c_str()).x;
-          ImGui::TableSetupColumn("addr",ImGuiTableColumnFlags_WidthFixed, MAX(widthOne,ImGui::CalcTextSize("00").x));
+          float widthOne=MAX(ImGui::CalcTextSize(fmt::sprintf("%X",size-1).c_str()).x,ImGui::CalcTextSize("00").x);
+          ImGui::TableSetupColumn("addr",ImGuiTableColumnFlags_WidthFixed,widthOne);
 
           ImGui::TableNextRow();
           ImGui::TableNextColumn();
