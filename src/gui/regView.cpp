@@ -40,7 +40,7 @@ void FurnaceGUI::drawRegView() {
       }
       if (ImGui::BeginPopupContextItem("regViewSettingsPopup",ImGuiPopupFlags_MouseButtonLeft)) {
         if (i==0) {
-          if (ImGui::InputInt(_("Bytes per columns##RegViewColumns"),&regViewColumns,1,4)) {
+          if (ImGui::InputInt(_("Bytes per column##RegViewColumns"),&regViewColumns,1,4)) {
             if (regViewColumns<1) regViewColumns=1;
             if (regViewColumns>64) regViewColumns=64;
           }
@@ -62,7 +62,7 @@ void FurnaceGUI::drawRegView() {
           int calcSizeMul=(bsr32(calcSize)+3)>>2;
           float widthOne=ImGui::CalcTextSize("0").x;
           float widthMul=1.0f+((float)calcSizeMul);
-          ImGui::TableSetupColumn("addr",ImGuiTableColumnFlags_WidthFixed, widthOne*widthMul);
+          ImGui::TableSetupColumn("addr",ImGuiTableColumnFlags_WidthFixed, MAX(widthOne*widthMul,ImGui::CalcTextSize("00").x));
 
           ImGui::TableNextRow();
           ImGui::TableNextColumn();
