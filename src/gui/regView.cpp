@@ -36,9 +36,12 @@ void FurnaceGUI::drawRegView() {
         if (ImGui::IsItemHovered(ImGuiHoveredFlags_DelayShort)) {
           ImGui::SetTooltip(_("Register View settings"));
         }
+        if (ImGui::IsItemClicked()) {
+          ImGui::OpenPopup("regViewSettingsPopup");
+        }
         ImGui::SameLine();
       }
-      if (ImGui::BeginPopupContextItem("regViewSettingsPopup",ImGuiPopupFlags_MouseButtonLeft)) {
+      if (ImGui::BeginPopup("regViewSettingsPopup")) {
         if (i==0) {
           if (ImGui::InputInt(_("Bytes per column##RegViewColumns"),&regViewColumns,1,4)) {
             if (regViewColumns<1) regViewColumns=1;
