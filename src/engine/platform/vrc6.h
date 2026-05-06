@@ -54,6 +54,7 @@ class DivPlatformVRC6: public DivDispatch, public vrcvi_intf {
   };
   FixedQueue<QueuedWrite,64> writes;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
   vrcvi_core vrc6;
   int prevSample;
   unsigned char regPool[13];

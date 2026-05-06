@@ -46,6 +46,7 @@ class DivPlatformMMC5: public DivDispatch {
   };
   FixedQueue<QueuedWrite,128> writes;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
   int dacPeriod, dacRate;
   unsigned int dacPos;
   int dacSample;

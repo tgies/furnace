@@ -77,6 +77,7 @@ class DivPlatformLynx: public DivDispatch {
   };
   FixedQueue<QueuedWrite,512> writes;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
   friend void putDispatchChip(void*,int);
   friend void putDispatchChan(void*,int,int);
 

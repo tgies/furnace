@@ -220,6 +220,7 @@ class DivPlatformSID3: public DivDispatch {
   FixedQueue<QueuedWrite,SID3_NUM_REGISTERS * 4> writes;
   DivWaveSynth ws;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
 
   unsigned char writeOscBuf;
 

@@ -65,6 +65,7 @@ class DivPlatformNDS: public DivDispatch, public nds_sound_intf {
   };
   FixedQueue<QueuedWrite,2048> writes;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
 
   unsigned char* sampleMem;
   size_t sampleMemLen;

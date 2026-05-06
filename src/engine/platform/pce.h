@@ -109,6 +109,7 @@ class DivPlatformPCE: public DivDispatch {
   FixedQueue<QueuedWrite,512> writes;
   // this provides pitch calculation.
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
 
   // PCE is a bit unique. you've got a channel selection register which you must write to
   // before setting channel registers.

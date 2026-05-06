@@ -90,6 +90,7 @@ class DivPlatformSoundUnit: public DivDispatch {
   };
   FixedQueue<QueuedWrite,512> writes;
   DivPitchTable pitchTable;
+  DivPitchTableManager samplePitchTable;
   unsigned char lastPan;
   bool sampleMemSize;
   unsigned char ilCtrl, ilSize, fil1;
