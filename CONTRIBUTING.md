@@ -96,9 +96,13 @@ additional guidelines:
 - on a switch block, **always** put `default` last and not in any other position.
   - I have fear of some C/C++ compilers ignoring the rest of cases upon hitting default.
 
-### Do NOT Force-Push after submitting Pull Request
+### ***Do NOT Force-Push after submitting Pull Request***
 
-if you do so, your pull request will be closed.
+**if you do so, your pull request will be closed.**
+
+force-pushing:
+1. allows you to insert malicious commits and (perhaps) go un-noticed
+2. makes life harder for other collaborators as now they have to merge their work and potentially differing commits, or reset --hard
 
 ### Demo Songs
 
