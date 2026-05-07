@@ -3756,7 +3756,7 @@ void FurnaceGUI::initSystemPresets() {
     }
   );
   ENTRY(
-    _("Namco Pole Position WSG (8-channel quadrophonic)"), {
+    _("Namco Pole Position WSG (8-channel quadraphonic)"), {
       CH(DIV_SYSTEM_NAMCO_POLEPOS, 1.0f, 0, "")
     }
   );
