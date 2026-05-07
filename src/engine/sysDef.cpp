@@ -2739,7 +2739,7 @@ void DivEngine::registerSystems() {
   sysDefs[DIV_SYSTEM_NAMCO_POLEPOS]=new DivSysDef(
     _("Namco Pole Position WSG"), NULL, 0xfe/*placeholder*/, 0, 8, 8, 8,
     false, true, 0, false, 0, 32, 16,
-    _("a wavetable sound generator used in Pole Position, with 8 voices and quadrophonic sound."),
+    _("a wavetable sound generator used in Pole Position, with 8 voices and quadraphonic sound."),
     DivChanDefFunc(simpleChanDef<DIV_CH_WAVE,DIV_INS_NAMCO>),
     namcoEffectHandlerMap
   );
